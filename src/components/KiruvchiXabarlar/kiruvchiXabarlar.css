@@ -1,0 +1,23 @@
+.message_title strong{
+  cursor: pointer;
+}
+.message_title strong:hover{
+  color: blue;
+  text-decoration: underline;
+}
+.refresh_btn_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.refresh_btn{
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.refresh_btn:hover{
+  background-color: #1266f1;
+  color: white;
+}

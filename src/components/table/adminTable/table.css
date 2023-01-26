@@ -1,0 +1,8 @@
+.delete_modal{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: -150%;
+    right:0;
+    background-color: aqua;
+}

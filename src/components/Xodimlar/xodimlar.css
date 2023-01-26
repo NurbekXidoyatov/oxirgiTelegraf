@@ -1,0 +1,207 @@
+
+.xodimlar-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 10000;
+}
+.table-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.wrapper-admin-qowiw-form{
+  position: absolute;
+  width: 50vw;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  padding: 40px 20px;
+  border-radius: 24px;
+  animation-name: adminQowiw ;
+  animation-duration: .3s;
+  z-index: 10010;
+}
+@keyframes adminQowiw{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.input-group{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.xodimlar-edit-button{
+  display:inline-block;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  color:#FF8C00;
+}
+.xodimlar-delete-button{
+  display:inline-block;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  color:red;
+}
+.admin-qowiw-btn{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+.form-left{
+  width: 100%;
+}
+.form-left label{
+  color: #3c3a38;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-item{
+  cursor: pointer;
+}
+.mtu_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin_input_group_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+ /* Bow sahifa  */
+
+
+.statistics_window_wrapper{
+  margin-bottom: 50px;
+}
+.statistics_title{
+  font-size: 1.5rem;
+  color: #212B36;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: Public Sans,sans-serif;
+  margin-bottom: 40px;
+}
+
+.statistics_windows{
+  display: flex;
+  justify-content: space-between;
+}
+
+.statistics_window{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px;
+  position: relative;
+  z-index: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-shadow: none;
+  width: 22%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.statistics_window:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: scale(1.1);
+}
+.statistics_window:nth-child(1){
+  background-color: #D1E9FC;
+}
+.statistics_window:nth-child(2){
+  background-color: #D0F2FF;
+}
+.statistics_window:nth-child(3){
+  background-color: #FFF7CD;
+}
+.statistics_window:nth-child(4){
+  background-color: #FFE7D9;
+}
+
+.statistics_window:nth-child(1) .count_department,
+.statistics_window:nth-child(1) .name_department{
+  color: #061B64;
+}
+.statistics_window:nth-child(2) .count_department,
+.statistics_window:nth-child(2) .name_department{
+  color: #04297A;
+}
+.statistics_window:nth-child(3) .count_department,
+.statistics_window:nth-child(3) .name_department{
+  color: #7A4F01;
+}
+.statistics_window:nth-child(4) .count_department,
+.statistics_window:nth-child(4) .name_department{
+  color: #7A0C2E;
+}
+
+
+.window_img{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.count_department{
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: Public Sans,sans-serif;
+  font-size: 2rem;
+}
+.name_department{
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5714285714285714;
+  font-size: 0.875rem;
+  font-family: Public Sans,sans-serif;
+  opacity: 0.72;
+  text-align: center;
+  color: #061B64;
+}
+.piechart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
