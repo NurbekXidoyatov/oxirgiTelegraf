@@ -25,8 +25,6 @@ export default function SendedMessageToOrganization() {
   const {request} = useHttp()
   const [query] = useQueryParams();
   const { page } = query;
-  console.log(allSendedMessageToOrg?.length === "true");
-
   const showBasket = () => {
     setshowAdminQowiw(!showAdminQowiw)
   }

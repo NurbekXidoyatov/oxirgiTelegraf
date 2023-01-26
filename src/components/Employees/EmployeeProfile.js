@@ -1,8 +1,6 @@
-import { BarChart } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 import { UniversalURL } from "../AsyncURL/BaseUrl";
 import { useHttp } from "../AsyncURL/useHttp";
-import BarchsrtInfo from "../Xodimlar/BarChartInfo"
 
 
 export default function EmployeeProfile() {
@@ -12,43 +10,6 @@ export default function EmployeeProfile() {
   const [countOrg, setCountOrg] = useState([]);
   const [countOEmp, setCountEmp] = useState([]);
 
-
-//   useEffect(() => {
-// // count of department
-//     request(
-//       `${UniversalURL}department/find/all`,
-//       "GET",
-//       null,
-//       {
-//         Authorization: `Bearer ${localStorage.getItem("token")}`,
-//         "Content-type": "application/json",
-//       }
-//     )
-//       .then((response) => {
-//         setCountDepartment(response?.data?.numberOfElements)})
-//       .catch((error) => console.log(error));
-// // count of organization
-//       request(`${UniversalURL}organization/find/all`, "GET", null, {
-//         "Authorization" : `Bearer ${localStorage.getItem("token")}`,
-//         "Content-type":"application/json"
-//       })
-//       .then(response => {  
-//         setCountOrg(response?.data?.numberOfElements)
-//       }).catch(error => console.og(error))
-
-// // count of employees
-//       request(`${UniversalURL}employee/find/all`, "GET", null, {
-//         "Authorization" : `Bearer ${localStorage.getItem("token")}`,
-//         "Content-type":"application/json"
-//       })
-//       .then(response => {  
-//         //setCountEmp(response?.data?.numberOfElements)
-//         console.log(response);
-//       }).catch(error => console.og(error))
-
-
-
-//   }, [request]);
 
 
   return (
@@ -90,7 +51,6 @@ export default function EmployeeProfile() {
           </div>
         </div>
       </div>
-      <BarchsrtInfo/>
     </>
   );
 }

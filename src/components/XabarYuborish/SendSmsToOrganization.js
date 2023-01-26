@@ -38,7 +38,7 @@ export default function SendSmsToOrganization({ showBasket }) {
   }, []);
 
   const onSubmitHandlerXabarYuborish = async () => {
-    const hashId = await upload(xabarFayli);
+    const hashId = xabarFayli ? await upload(xabarFayli) : null;
 
     const body = {
       hashId,

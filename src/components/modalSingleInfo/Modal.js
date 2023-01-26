@@ -12,10 +12,10 @@ export default function Modal({
   setshowAcceptbtn,
   showAcceptbtn,
   chooseAccept,
-  chooseCancel,
   showSeparateMessage,
   setShowSeparateMessage,
   singleId,
+  setShowRejectModal,
 }) {
 
 
@@ -117,7 +117,7 @@ export default function Modal({
             <motion.div class="modal-footer">
             {message?.messageStatus === "SENDING" ||
               message?.messageStatus === "READING" ? (
-                <button class="action bg_color_btn_cancell" onClick={() => chooseCancel(singleId)}>
+                <button class="action bg_color_btn_cancell" onClick={() => setShowRejectModal(true)}>
                   Rad etish
                 </button>
               ) : null}

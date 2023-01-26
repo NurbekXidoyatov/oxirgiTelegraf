@@ -33,4 +33,5 @@
   background-color: #fdfcfb;
   outline: #e9e6de 1px;
   outline-style:dotted;
+  overflow: hidden;
 }

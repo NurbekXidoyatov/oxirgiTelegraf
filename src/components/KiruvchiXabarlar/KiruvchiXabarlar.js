@@ -11,6 +11,7 @@ import DropdownSort from "../dropdownForSelectSort/DropdownSort";
 import { sortByMessageAcceptedFromUser } from "../dropdownForSelectSort/SortText";
 import LoadingPage from "../loading/Loading";
 import Modal from "../modalSingleInfo/Modal";
+import RejectInfoModal from "../modalSingleInfo/RejectInfoModal";
 
 export default function KiruvchiXabarlar() {
   const { request } = useHttp();
@@ -21,6 +22,7 @@ export default function KiruvchiXabarlar() {
   const [sortText, setSortText] = useState("");
   const [status, setStatus] = useState("");
   const [showSeparateMessage, setShowSeparateMessage] = useState(false);
+  const [showRejectModal, setShowRejectModal] = useState(false);
   const [singleId, setsingleId] = useState("");
   const [value, setValue] = useState(true);
   const { page } = query;
@@ -93,6 +95,7 @@ export default function KiruvchiXabarlar() {
           chooseAccept={chooseAccept}
           showAcceptbtn={showAcceptbtn}
           setshowAcceptbtn={setshowAcceptbtn}
+          setShowRejectModal={setShowRejectModal}
         />
       ) : null}
       <div className="input-selection mb-4">
@@ -114,6 +117,7 @@ export default function KiruvchiXabarlar() {
           Refresh
         </button>
       </div>
+      { showRejectModal ? <RejectInfoModal setShowRejectModal={setShowRejectModal}   showSeparateMessage={showSeparateMessage}/> : null}
     </div>
   );
 }

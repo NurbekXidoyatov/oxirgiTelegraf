@@ -1,8 +1,6 @@
-import { BarChart } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 import { UniversalURL } from "../AsyncURL/BaseUrl";
 import { useHttp } from "../AsyncURL/useHttp";
-import BarchsrtInfo from "../Xodimlar/BarChartInfo"
 
 
 export default function ProfileManagers() {
@@ -90,7 +88,6 @@ export default function ProfileManagers() {
           </div>
         </div>
       </div>
-      <BarchsrtInfo/>
     </>
   );
 }

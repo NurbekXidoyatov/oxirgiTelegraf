@@ -1,13 +1,16 @@
-import { BarChart } from "@mui/icons-material";
+//import { BarChart } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 import { UniversalURL } from "../AsyncURL/BaseUrl";
 import { useHttp } from "../AsyncURL/useHttp";
-import PieRechartComponent from "./PieChart"
-import BarChartInfo from "./BarChartInfo";
+import BarchartInfoAllMessages from "../statistics/BarchartInfoAllMessages";
+import BarcharTinfoAllEmployees from "../statistics/BarcharTinfoAllEmployees";
+
 export default function BoshSahifa() {
 
   const { request } = useHttp();
   const [statistics, setStatistics] = useState({});
+
+  console.log(statistics);
 
 
   useEffect(() => {
@@ -27,7 +30,6 @@ export default function BoshSahifa() {
       .catch((error) => console.log(error));
   }, [request]);
 
-  console.log(statistics);
 
 
   return (
@@ -69,7 +71,10 @@ export default function BoshSahifa() {
           </div>
         </div>
       </div>
-      <BarChartInfo statistics={statistics}/>
+      <h3 className="m-3">Barcha kiruvchi va chiquvchi xabarlar haqida ma'lumot</h3>
+      <BarchartInfoAllMessages statistics={statistics}/>
+      <h3 className="m-3">Telegraflardagi ishchilar haqida ma'lumot</h3>
+      <BarcharTinfoAllEmployees statistics={statistics}/>
     </>
   );
 }
